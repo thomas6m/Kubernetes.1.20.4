@@ -51,6 +51,7 @@ Install the latest Patches:
 
 ----------------------------------------------
 # Create the .conf file to load the modules at bootup
+
 cat <<EOF | sudo tee /etc/modules-load.d/crio.conf
 overlay
 br_netfilter
