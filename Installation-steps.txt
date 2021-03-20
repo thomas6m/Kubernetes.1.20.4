@@ -118,6 +118,10 @@ systemctl enable --now kubelet && systemctl enable kubelet && systemctl start ku
 
 Reboot the server
 
+
+########################################
+Execute the below command only in master node
+
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 grep Network kube-flannel.yml
@@ -135,6 +139,8 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-clu
 
 export KUBECONFIG=/etc/kubernetes/admin.conf
 
+########################################
+Execute the below command in worker node
 
 kubeadm join 192.168.86.250:6443 --token 1yvsyg.x7hzku9nzh03vmu7 --discovery-token-ca-cert-hash sha256:aab265c2da1d81e84bc2aa3055725111e8aac1e3dadfbd045e5f1a2f2f3cf4de
 
