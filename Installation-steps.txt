@@ -116,6 +116,8 @@ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 
 systemctl enable --now kubelet && systemctl enable kubelet && systemctl start kubelet
 
+Reboot the server
+
 wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 
 grep Network kube-flannel.yml
